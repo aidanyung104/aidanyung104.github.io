@@ -114,7 +114,7 @@ li {
 .sidebar {
     position: absolute;
     left: 0.35vw;
-    height: 204.8%;
+    height: 205vh;
 }
 
 .side-container {
