@@ -302,7 +302,7 @@ Animate to a new page using a clip-path circle expansion.
 function navigateTo(targetId, originX = '50%', originY = '50%') {
 const targetPage = $(targetId);
 if (!targetPage) return;
-const colorMap = { about: '#564787', work: '#D5573B', interests: '#564787', home: '#101935' };
+const colorMap = { about: '#FF6A00', work: '#B84DFF', interests: '#00E5FF', home: '#0B1530' };
 overlay.style.background = colorMap[targetId] ?? '#101935';
 overlay.style.setProperty('--ox', originX);
 overlay.style.setProperty('--oy', originY);
