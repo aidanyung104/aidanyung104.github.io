@@ -33,10 +33,27 @@
 </head>
 <body>
 
+  <nav class="site-nav" aria-label="Main navigation">
+    <p class="site-nav-label">PAGES</p>
+    <button class="site-nav-link active" data-target="home" aria-current="page">Home</button>
+    <button class="site-nav-link" data-target="about">About</button>
+    <button class="site-nav-link" data-target="work">Work</button>
+    <button class="site-nav-link" data-target="interests">Interests</button>
+  </nav>
+
   <!-- ═══════════════════════════════════════════════
        HOME
   ═══════════════════════════════════════════════ -->
   <section id="home" class="page active">
+    <div class="home-stars" aria-hidden="true">
+      <span class="home-star home-star-one"></span>
+      <span class="home-star home-star-two"></span>
+      <span class="home-star home-star-three"></span>
+      <span class="home-star home-star-four"></span>
+      <span class="home-star home-star-five"></span>
+      <span class="home-star home-star-six"></span>
+      <span class="home-star home-star-seven"></span>
+    </div>
     <div class="home-inner">
 
       <h1 class="site-name">Aidan Yung</h1>
@@ -45,7 +62,7 @@
         <div class="tv-frame">
           <div class="tv-screen" id="tv-screen"
                role="navigation"
-               aria-label="Site navigation — left half for About, right half for Work"
+            aria-label="Site navigation — left third for About, center third for Work, right third for Interests"
                tabindex="0">
 
             <!-- Top 75%: classic 7-bar SMPTE pattern -->
@@ -71,8 +88,9 @@
             </div>
 
             <!-- Hover navigation labels -->
-            <span class="tv-hint tv-hint-left"  aria-hidden="true">ABOUT</span>
-            <span class="tv-hint tv-hint-right" aria-hidden="true">WORK</span>
+            <span class="tv-hint tv-hint-left" aria-hidden="true">ABOUT</span>
+            <span class="tv-hint tv-hint-center" aria-hidden="true">WORK</span>
+            <span class="tv-hint tv-hint-right" aria-hidden="true">INTERESTS</span>
 
             <!-- CRT overlay effects -->
             <div class="tv-scanlines" aria-hidden="true"></div>
@@ -86,7 +104,7 @@
 
       <!-- Screen-reader nav instructions -->
       <p class="sr-only">
-        Use left/right arrow keys on the TV to navigate. Left: About. Right: Work.
+        Select the left third for About, center third for Work, or right third for Interests. Keyboard: left arrow, down arrow, and right arrow respectively.
       </p>
 
     </div>
@@ -113,6 +131,9 @@
 
           <div class="connect-block">
             <p class="connect-label">Let's connect!</p>
+            <div class="resume-row">
+              <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
+            </div>
             <!-- Social links: injected by scripts.js -->
             <div class="social-row" id="social-links" role="list"></div>
           </div>
@@ -132,20 +153,44 @@
       <h2 class="page-title">Work</h2>
 
       <div class="work-layout">
-        <div class="work-left-col">
-          <!-- Employer buttons: injected by scripts.js -->
-          <div class="work-btn-group" id="work-buttons"
-               role="list" aria-label="Select an employer"></div>
+         <!-- Employer tabs: injected by scripts.js -->
+         <div class="work-btn-group" id="work-buttons"
+           role="tablist" aria-label="Select an employer" aria-orientation="horizontal"></div>
 
-          <div class="work-arrow" aria-hidden="true">↓</div>
+         <div class="work-content-layout">
+        <!-- Selected job description: injected by scripts.js -->
+        <div class="work-desc" id="work-description" role="tabpanel"
+          aria-live="polite" aria-labelledby="work-tab-disney"></div>
 
-          <!-- Job description: injected by scripts.js, live region for a11y -->
-          <div class="work-desc" id="work-description" aria-live="polite"></div>
-        </div>
-
-        <!-- Photo gallery: injected by scripts.js -->
+        <!-- Photo and video gallery: injected by scripts.js -->
         <div class="photo-grid" id="work-gallery"
-             role="list" aria-label="Work photo gallery"></div>
+          role="list" aria-label="Work photo and video gallery"></div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       INTERESTS
+  ═══════════════════════════════════════════════ -->
+  <section id="interests" class="page">
+    <nav class="top-nav">
+      <button class="back-btn" data-target="home" aria-label="Back to home">← HOME</button>
+    </nav>
+    <div class="page-container">
+      <h2 class="page-title">Interests</h2>
+
+      <div class="interest-layout work-layout">
+         <div class="interest-tabs work-btn-group" id="interest-tabs"
+           role="tablist" aria-label="Select an interest" aria-orientation="horizontal"></div>
+
+         <div class="work-content-layout">
+          <div class="work-desc" id="interest-description" role="tabpanel"
+               aria-live="polite" aria-labelledby="interest-tab-broadcast"></div>
+
+        <div class="photo-grid" id="interest-gallery"
+          role="list" aria-label="Interest photo gallery"></div>
+         </div>
       </div>
     </div>
   </section>
@@ -157,6 +202,7 @@
        role="dialog" aria-modal="true" aria-label="Enlarged photo">
     <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
     <img id="lb-img" src="" alt="">
+    <iframe id="lb-video" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
   <!-- ═══════════════════════════════════════════════
