@@ -12,12 +12,15 @@ ADDING PHOTOS
 ─────────────
 Drop image files into the matching images/ subfolder, then
 add the path string to the relevant photos array.
+For captions, use { src: "path", caption: "Caption text" }.
+Existing string paths continue to work without captions.
 
 ADDING YOUTUBE VIDEOS
 ─────────────────────
 Add { id: "VIDEO_ID", title: "Video title" } to the
 matching videos array. The ID is the value after v= in a
 YouTube watch URL, or after youtu.be/ in a short URL.
+Optionally add start: SECONDS to begin playback at that time.
 
 ADDING YOUTUBE VIDEOS
 ─────────────────────
@@ -46,9 +49,9 @@ bioText:
 "I'm a student at UNC-Chapel Hill majoring in Computer Science and Journalism. I got my start in broadcast in high school and became interested in the technology behind it. Since then, I've explored graphics, streaming, and broadcast technology at different levels. I'd love to continue to pursue my interest in the technical side of media production and distribution!",
 
 photos: [
-  "images/about/headshot.jpg",
-  "images/about/sportscenter.jpg",
-  "images/about/disney-group.jpg",
+  { src: "images/about/headshot.jpg", caption: "default caption" },
+  { src: "images/about/sportscenter.jpg", caption: "default caption" },
+  { src: "images/about/disney-group.jpg", caption: "default caption" },
   // "images/about/photo4.jpg",
 ],
 videos: [],
@@ -66,36 +69,60 @@ work: [
 id: "disney",
 label: "Disney",
 description:
-"At Disney, I gained experience on the distribution side of broadcasting, exploring failover systems, software-defined infrastructure, and digital media workflows.\n\n" +
-"While at Disney, I was tasked with modernizing the webscraping system for ESPN in Bristol. Previously, web content was captured from a single console and required two people to operate it; one at the console and one from an editing room. Because videos had to be recorded linearly, a twenty minute recording took twenty minutes to scrape. This was inefficient for the editors who often needed less than a minute from the captures. \n\n" + "To solve this problem, I developed a webpage running yt-dlp on the backend which accepted a URL and would automatically download the video to the media asset management (MAM) system for processing and editing.\n\n" + "Throughout project, I gained experience with different AI coding assistants like Kiro and Claude Code, as well as Kubernetes, AWS cloud services, Jenkins, CI/CD pipelines, navigating network security and integrating with existing infrastructure. I participated in the full project lifecycle, pitching a product, conducting a cost analysis, gathering user feedback, developing the application, and planning it's deployment. Working in a large-scale corporate environment taught me a lot about corporate communication, operational practicality, and result-oriented planning.",
+"My summer at Disney, true to form, was magical.\n\n" + " After being on the production side of broadcasting for years, I got to explore the distribution side of the industry. Although I was based in NYC, I also got the chance to travel to ESPN’s facilities in Bristol, CT as well as the Woodlands in Houston, TX. Throughout the summer I learned about fail-overs and transport streams, software defined infrastructure, and SCTE markers.\n\n" +
+"I was tasked with revamping the webscraping system used in Bristol. My new system is used daily by 300+ production assistants, content assistants and producers in Bristol. I gathered user feedback, pitched a solution, developed it (with the help of AI tools), and deployed it using AWS cloud services. Running yt-dlp on the backend, I created an easy-to-access webpage that received a URL and downloaded the video directly to the media asset management system for users in Bristol. \n\n" + "With a week left in my internship, I presented the working demo I had, connecting the cloud app to the nearline MAM through an on-prem VM I was using as a proxy.\n\n" + "“You just turned 30 minutes of work into a press of a button”\n\n" + "The team in Bristol was amazed. I loved receiving their feedback, and added an additional feature before my internship ended.\n\n" + "I learned a lot from this project – network traffic, cloud deployment options, and how to incorporate AI into my workflow, as well as how to navigate corporate structure and interact with different teams. Skills I’ll need as a professional.\n\n" + "Lastly, my experience at Disney isn’t complete without me mentioning the city. New York was an exciting place that taught me as much as the internship did. I discovered the convenience of the subway and that tax adds up on every bill. I learned that I missed the slow pace of Chapel Hill, but I loved the bustle of the city. And I met the most passionate, determined, and inspiring people Canin New York, and I hope to be back soon.",
 photos: [
-"images/work/disney/team.jpg",
-"images/work/disney/digital-center.jpg",
-"images/work/disney/sportscenter.jpg",
-"images/work/disney/disney-group.jpg",
+{ src: "images/work/disney/internclass.png", caption: "Disney Entertainment + ESPN Product & Technology NYC Interns 2026" },
+{ src: "images/work/disney/scdesk.png", caption: "Sportscenter Desk in Bristol, CT" },
+{ src: "images/work/disney/teampic.png", caption: "My team, the Advanced Technology Group!" },
+{ src: "images/work/disney/squad.png", caption: "Run club squad" },
+{ src: "images/work/disney/parade.jpg", caption: "Disney in the NYC Pride Parade" },
+{ src: "images/work/disney/satellites.png", caption: "Satellites in Bristol, CT" },
+{ src: "images/work/disney/distribution.png", caption: "Transmission and Operations Control in Bristol, CT" },
+{ src: "images/work/disney/bristol.png", caption: "DC1, where the webscraping console was" },
+{ src: "images/work/disney/emmy.png", caption: "Emmy I totally earned" },
+{ src: "images/work/disney/DC3.png", caption: "The Woodlands, Houston TX" },
+{ src: "images/work/disney/markkelly.png", caption: "Kelly & Mark's studio" }
 ],
 },
 {
 id: "smt",
 label: "SMT",
 description:
-"Description of your work at SMT goes here.\n\n" +
-"Add additional paragraphs as needed.\n\n" +
-"Tools, technologies, and key contributions.",
+"Throughout the later half of 2024 I worked remote graphics for the NHL through SportsMEDIA Technology in Durham, NC. This led to my summer internship with them as a Remote Operations Intern.\n\n" + "At the beginning of the summer, I got the chance to shadow and work on the Tour de France and ESPN’s PFL. In between shows, we configured cabling, assembled rack units for NFL trucks, and downloaded, updated, and tested software on machines for football and basketball. Then, beginning in the middle of summer, I got the chance to travel.\n\n" + "I first traveled to Columbus, OH, for the Honda Indy 200 at Mid-Ohio. There had never been an intern with the Indycar crew before, so not only did I set up and run the pylon and telemetry for the races with SMT’s technology, but I got the chance to try a variety of positions. I set up and fixed mics with the audio engineers, learned to operate remote cameras from the cameramen, met the talent casting the race and sat in on the international broadcast’s control room. Aside from a great learning experience, it was one of the most patriotic Fourth of July’s I’ve had so far.\n\n" + "Later in the summer, I worked at the nicest facility of my career: The NASCAR production studio in Charlotte, NC. Running telemetry and the pylon remotely from the studio gave me a glimpse at what the future of production could be – a centralized production facility with a crew that doesn’t have to travel site to site.\n\n" + "In Spring 2026 I returned – not on the operations side, but with a more tech-focused role. As a Quality Assurance Intern, I tested the software updates and graphics packages before they were shipped. This was my first exposure to an Agile workflow. I wrote documentation, flagged bugs and coordinated with PMs and SWEs to meet spring deadlines. \n\n" + "Thanks to SMT, I learned about computer graphics, computer hardware, and network and routing traffic. I love that I got to explore my interest in technology while remaining close to production.",
 photos: [
-"images/work/smt/photo1.jpg",
+{ src: "images/work/smt/nascar.png", caption: "The NASCAR studio in Charlotte, NC" },
+{ src: "images/work/smt/canes.png", caption: "PNC Arena, where SMT tests their NHL technology" },
+{ src: "images/work/smt/golfvb.png", caption: "Videoboard at a golf course in Greensboro we disassembled" },
+{ src: "images/work/smt/imsa.png", caption: "IMSA control room" },
+{ src: "images/work/smt/indycar.png", caption: "Indycar pit" },
+{ src: "images/work/smt/indystation.png", caption: "Indycar graphics truck, where I tracked data collection" },
+{ src: "images/work/smt/rackunit.png", caption: "Disassembling an SMT rack unit" },
+{ src: "images/work/smt/nhl.png", caption: "Remote graphics for the NHL" },
+{ src: "images/work/smt/pflgfx.png", caption: "Remote graphics for ESPN's PFL" },
+{ src: "images/work/smt/nflpacks.png", caption: "NFL unit packaging" },
+{ src: "images/work/smt/truck.png", caption: "Indycar truck control room" },
+{ src: "images/work/smt/workstation.png", caption: "Configuring an SMT workstation" },
 ],
 },
 {
 id: "durham-bulls",
 label: "The Durham Bulls",
 description:
-"In 2021 I was introduced to the world of broadcasting at Explorer Post 50.\n\n" +
-"For the next four years, I ran cameras, audio, shading, graphics, replay, TD, directed and produced shows for the Durham Bulls' local television show. At the program, I interviewed and trained interns, led pre-game and post-game meetings, set up cameras and organized strike each night, and was involved with other tasks involved with the ballpark. \n\n" + "Aside from ballpark work, I made friends, got involved with the ",
+"Rods. The Cones. The Rockets. Calling Joe (WRAL TOC). Fixing the umbrella. Stealing cookies. Chinese fire drill. Taylor Swift over comms. Barbie uno in a rain delay. All the time in between.\n\n" +
+"My introduction to broadcasting began near the end of the pandemic, when I joined the Durham Bulls’ Explorer Post 50 internship program. At the time, I knew nothing about production. I didn’t know how it would change my life. \n\n" + "For the next four years, I spent my summers running camera, replay, audio, video, graphics, TD, producing and directing. I led set and strike, and grew into a leadership position where I interviewed and trained new interns.\n\n" + "I became interested in the production technology and software while working behind the broadcast. Working in the rack room and having to repair and restart old equipment led me to pursue computer science at UNC.\n\n" + "These days I visit the Bulls when I have free time — usually a few evenings each year. I enjoy meeting the new crew, seeing the interns I taught teach the new interns, and giving advice for those just beginning their careers.\n\n",
 photos: [
-"images/work/durham-bulls/photo1.jpg",
+{ src: "images/work/bulls/postgame.png", caption: "Postgame selfie" },
+{ src: "images/work/bulls/duckrace.png", caption: "Racing rubber ducks after work" },
+{ src: "images/work/bulls/cam2vibe.png", caption: "The view from high home" },
+{ src: "images/work/bulls/chilling.png", caption: "The crowded control room pre-game" },
+{ src: "images/work/bulls/directing.png", caption: "Directing with my friends" },
+{ src: "images/work/bulls/producer.png", caption: "Lost in thought producing" },
+{ src: "images/work/bulls/starwars.png", caption: "Star Wars night at the ballpark" },
 ],
-videos: [],
+videos: [
+{ id: "nvdnfI9g4PY", title: "The Post 50 Vlog", start: 552 },
+],
 },
 {
 id: "savannah-bananas",
@@ -104,7 +131,7 @@ description:
 "Description of your work with the Savannah Bananas.\n\n" +
 "Add additional paragraphs as needed.",
 photos: [
-"images/work/savannah-bananas/photo1.jpg",
+{ src: "images/work/savannah-bananas/photo1.jpg", caption: "default caption" },
 ],
 },
 ],
@@ -155,8 +182,11 @@ function renderGallery(gallery, photos, videos = [], label) {
 const mediaCount = photos.length + videos.length;
 gallery.classList.toggle('has-many', mediaCount >= 3);
 
-photos.forEach((src, i) => {
-const alt = `${label} — photo ${i + 1}`;
+photos.forEach((photo, i) => {
+const { src, caption = '', alt: customAlt } = typeof photo === 'string'
+? { src: photo }
+: photo;
+const alt = customAlt || `${label} — photo ${i + 1}`;
 const img = el('img', {
 className: 'grid-img',
 src,
@@ -166,11 +196,12 @@ role: 'listitem',
 });
 img.style.setProperty('--anim-delay', `${(i * 0.07).toFixed(3)}s`);
 img.classList.add('anim-up');
-img.addEventListener('click', () => openLightbox(src, alt));
+img.addEventListener('click', () => openLightbox(src, alt, caption));
 gallery.appendChild(img);
 });
 
-videos.forEach(({ id, title = 'YouTube video' }) => {
+const videoTiles = document.createDocumentFragment();
+videos.forEach(({ id, title = 'YouTube video', start = 0 }, i) => {
 if (!/^[\w-]{11}$/.test(id)) return;
 
 const tile = el('div', { className: 'grid-video-tile', role: 'listitem' });
@@ -179,7 +210,7 @@ className: 'grid-video-button',
 type: 'button',
 'aria-label': `Play video: ${title}`,
 });
-button.style.setProperty('--anim-delay', `${(mediaCount * 0.07).toFixed(3)}s`);
+button.style.setProperty('--anim-delay', `${(i * 0.07).toFixed(3)}s`);
 button.classList.add('anim-up');
 button.appendChild(el('img', {
 className: 'grid-video-thumb',
@@ -189,10 +220,11 @@ loading: 'lazy',
 }));
 button.appendChild(el('span', { className: 'video-play-icon', 'aria-hidden': 'true' }, '▶'));
 button.appendChild(el('span', { className: 'video-title' }, title));
-button.addEventListener('click', () => openVideo(id, title));
+button.addEventListener('click', () => openVideo(id, title, start));
 tile.appendChild(button);
-gallery.appendChild(tile);
+videoTiles.appendChild(tile);
 });
+gallery.prepend(videoTiles);
 }
 
 /* ============================================================
@@ -613,21 +645,34 @@ LIGHTBOX
 const lightbox = $('lightbox');
 const lbImg = $('lb-img');
 const lbVideo = $('lb-video');
+const lbCaption = $('lb-caption');
 const lbClose = $('lb-close');
 
-function openLightbox(src, alt = '') {
+function setLightboxCaption(caption = '') {
+lbCaption.textContent = caption;
+lbCaption.hidden = !caption;
+lightbox.classList.toggle('caption-open', Boolean(caption));
+if (caption) lbImg.setAttribute('aria-describedby', 'lb-caption');
+else lbImg.removeAttribute('aria-describedby');
+}
+
+function openLightbox(src, alt = '', caption = '') {
 lightbox.classList.remove('video-open');
 lbVideo.removeAttribute('src');
 lbImg.src = src;
 lbImg.alt = alt;
+setLightboxCaption(caption);
 lightbox.classList.add('open');
 lbClose.focus();
 }
 
-function openVideo(id, title) {
+function openVideo(id, title, start = 0) {
 lbImg.src = '';
+setLightboxCaption();
 lbVideo.title = title;
-lbVideo.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+const startTime = Number.isFinite(start) ? Math.max(0, Math.floor(start)) : 0;
+const startParam = startTime > 0 ? `&start=${startTime}` : '';
+lbVideo.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0${startParam}`;
 lightbox.classList.add('open', 'video-open');
 lbClose.focus();
 }
@@ -636,7 +681,10 @@ function closeLightbox() {
 lightbox.classList.remove('open');
 lbImg.src = '';
 lbVideo.removeAttribute('src');
-lightbox.classList.remove('video-open');
+lightbox.classList.remove('video-open', 'caption-open');
+lbCaption.textContent = '';
+lbCaption.hidden = true;
+lbImg.removeAttribute('aria-describedby');
 }
 
 lbClose.addEventListener('click', closeLightbox);
