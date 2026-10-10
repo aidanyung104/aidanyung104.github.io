@@ -76,7 +76,7 @@ photos: [
 { src: "images/work/disney/scdesk.png", caption: "Sportscenter Desk in Bristol, CT" },
 { src: "images/work/disney/teampic.png", caption: "My team, the Advanced Technology Group!" },
 { src: "images/work/disney/squad.png", caption: "Run club squad" },
-{ src: "images/work/disney/parade.jpg", caption: "Disney in the NYC Pride Parade" },
+{ src: "images/work/disney/parade.JPG", caption: "Disney in the NYC Pride Parade" },
 { src: "images/work/disney/satellites.png", caption: "Satellites in Bristol, CT" },
 { src: "images/work/disney/distribution.png", caption: "Transmission and Operations Control in Bristol, CT" },
 { src: "images/work/disney/bristol.png", caption: "DC1, where the webscraping console was" },
