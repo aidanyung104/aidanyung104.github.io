@@ -46,13 +46,13 @@ about: {
 bioLines: ["I'm capable. I'm flexible."],
 bioHeadline: "I'm just getting started.",
 bioText:
-"I'm a student at UNC-Chapel Hill majoring in Computer Science and Journalism. I got my start in broadcast in high school and became interested in the technology behind it. Since then, I've explored graphics, streaming, and broadcast technology at different levels. I'd love to continue to pursue my interest in the technical side of media production and distribution!",
+"I’m a Computer Science and Journalism student at UNC-Chapel Hill. I got my start in broadcast in high school, where I became interested in the technology behind it. Since then, I’ve explored graphics, streaming, and broadcast technology in a variety of settings. I’m especially interested in the intersection of software and media production, and I hope to continue building tools and systems that improve how content is created, managed, and distributed.",
 
 photos: [
   { src: "images/about/headshot.png", caption: "Aidan Yung, first of his name" },
-  { src: "images/about/dearnyc.png", caption: "Humans of New York art exhibition in NYC" },
-  { src: "images/about/gaming.png", caption: "Gaming with my friends" },
-  { src: "images/about/uncduke.png", caption: "UNC vs Duke game, 2024" },
+  { src: "images/about/uncduke.png", caption: "Go heels!" },
+  { src: "images/about/gaming.png", caption: "Gaming" },
+  { src: "images/about/goheelscam.png", caption: "Running camera at UNC" },
 ],
 videos: [],
 
@@ -106,6 +106,20 @@ photos: [
 ],
 },
 {
+id: "unc-duke",
+label: "UNC & Duke",
+description:
+"My path further into live production began in high school, when a connection through the Durham Bulls led me to freelance for Duke Athletics. What initially started as an opportunity to work on sports broadcasts during the school year became a way for me to explore the technical systems and teamwork behind live media. After coming to UNC-Chapel Hill, I continued that work with Go Heels Productions, working on videoboard, digital, and linear shows for a wide range of sports.\n\n" + "Across those experiences, I worked primarily in camera, audio, and replay, while also gaining experience in video, graphics, TD, and utility support. I learned to work with Grass Valley and Evertz systems and to adapt to the distinct demands of each production, whether covering basketball, football, volleyball, gymnastics, wrestling, soccer, or lacrosse.\n\n" + "The most valuable part of these experiences has been learning from the people around me. Working with experienced professionals has shown me how many roles contribute to a broadcast and how closely they depend on one another. It has given me a broader understanding of the industry and built my background so I understand the needs that must be met for a successful broadcast.",
+photos: [
+{ src: "images/work/acc/goheelscam.png", caption: "Camera for UNC" },
+{ src: "images/work/acc/dukereplay.png", caption: "Replay for Duke" },
+{ src: "images/work/acc/uncmbb.png", caption: "Camera for UNC basketball" },
+{ src: "images/work/acc/uncfbcam.png", caption: "Camera for UNC football" },
+{ src: "images/work/acc/audio.png", caption: "Audio for UNC" },
+{ src: "images/work/acc/dukembb.png", caption: "Camera for Duke basketball" },
+],
+},
+{
 id: "durham-bulls",
 label: "The Durham Bulls",
 description:
@@ -118,20 +132,12 @@ photos: [
 { src: "images/work/bulls/chilling.png", caption: "The crowded control room pre-game" },
 { src: "images/work/bulls/directing.png", caption: "Directing with my friends" },
 { src: "images/work/bulls/producer.png", caption: "Lost in thought producing" },
+{ src: "images/work/bulls/bananacam.png", caption: "Camera for the Savannah Bananas" },
+{ src: "images/work/bulls/shoe.png", caption: "Giant inflatable shoe next to my camera" },
 { src: "images/work/bulls/starwars.png", caption: "Star Wars night at the ballpark" },
 ],
 videos: [
 { id: "nvdnfI9g4PY", title: "The Post 50 Vlog", start: 552 },
-],
-},
-{
-id: "savannah-bananas",
-label: "Savannah Bananas",
-description:
-"Description of your work with the Savannah Bananas.\n\n" +
-"Add additional paragraphs as needed.",
-photos: [
-{ src: "images/work/savannah-bananas/photo1.jpg", caption: "default caption" },
 ],
 },
 ],
