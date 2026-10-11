@@ -49,10 +49,10 @@ bioText:
 "I'm a student at UNC-Chapel Hill majoring in Computer Science and Journalism. I got my start in broadcast in high school and became interested in the technology behind it. Since then, I've explored graphics, streaming, and broadcast technology at different levels. I'd love to continue to pursue my interest in the technical side of media production and distribution!",
 
 photos: [
-  { src: "images/about/headshot.jpg", caption: "default caption" },
-  { src: "images/about/sportscenter.jpg", caption: "default caption" },
-  { src: "images/about/disney-group.jpg", caption: "default caption" },
-  // "images/about/photo4.jpg",
+  { src: "images/about/headshot.png", caption: "Aidan Yung, first of his name" },
+  { src: "images/about/dearnyc.png", caption: "Humans of New York art exhibition in NYC" },
+  { src: "images/about/gaming.png", caption: "Gaming with my friends" },
+  { src: "images/about/uncduke.png", caption: "UNC vs Duke game, 2024" },
 ],
 videos: [],
 
