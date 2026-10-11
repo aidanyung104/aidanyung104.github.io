@@ -146,19 +146,36 @@ videos: [
 interests: [
 {
 id: 'broadcast',
-label: 'Broadcast & Streaming',
-description: 'I’m interested in how live content reaches audiences, and in building reliable systems behind broadcast and streaming.',
+label: 'Broadcast Production',
+description: 'I talk about broadcast a lot on this website, but it remains one of my interests, despite the fact that I no longer want to work on the production side of it.\n\n' + "I think broadcast is an extremely interesting, unconventional career. Many students are interested in it but don't know how to gain experience. I volunteer at the Bulls, and help out with UNC's student broadcasts, Carolina Week and Sports Xtra to stay involved with production and try to help others interested in pursuing a career in it.\n\n" + "Combining my interests in production and esports, I became the production manager for the Gaming Club at Carolina for two years. I restarted the esports production program and set up OBS streams. It forced me to get creative working a whole broadcast by myself, aside from talent. I no longer run the production for them, but provide assistance if they run into technical issues.",
+photos: [
+{ src: "images/interests/broadcast/sxtra.png", caption: "Sports Xtra broadcast control room" },
+{ src: "images/interests/broadcast/esportsdesk.png", caption: "Carolina Esports studio" },
+{ src: "images/interests/broadcast/valbc.png", caption: "Running the broadcast for a Valorant tournament" },
+],
+},
+{
+id: 'esports',
+label: 'Esports',
+description: "In middle school, I taught myself to build computers so I could play Fortnite with my friends. What began as a hobby grew into a lasting interest in technology, competition, and community. In high school, I got my first job to afford better peripherals for my PC and I learned to balance schoolwork with practice and competition. \n\n" + "At UNC I've played for and coached the Valorant team. While competing at local LANs has been rewarding, the greatest aspect of esports has been the people. Through the team, I have connected with alumni, received academic and career guidance, and formed some of my closest friendships. Esports remains important to me not only because I enjoy competing, but because it has given me another community.\n\n",
+photos: [
+{ src: "images/interests/esports/sen.png", caption: "Me and the Sentinels Valorant team" },
+{ src: "images/interests/esports/newpc.png", caption: "Progress pic when I was building my current PC" },
+{ src: "images/interests/esports/ogpc.png", caption: "My old computer" },
+{ src: "images/interests/esports/oglan.png", caption: "My first LAN with my friends, during the pandemic" },
+{ src: "images/interests/esports/arena1.png", caption: "At the Carolina Gaming Arena" },
+{ src: "images/interests/esports/arena.png", caption: "In the gaming studio" },
+],
+},
+{
+id: 'photography',
+label: 'Photography',
+description: 'Live sports brings technology, timing, and teamwork together. I’m drawn to the systems and crews that make each event happen.',
 photos: [],
 },
 {
-id: 'software',
-label: 'Software & Automation',
-description: 'I enjoy using software and automation to solve production problems and make complex workflows easier to operate.',
-photos: [],
-},
-{
-id: 'live-sports',
-label: 'Live Sports & Production',
+id: 'television',
+label: 'Television',
 description: 'Live sports brings technology, timing, and teamwork together. I’m drawn to the systems and crews that make each event happen.',
 photos: [],
 },
