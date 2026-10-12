@@ -58,8 +58,8 @@ videos: [],
 
 social: [
   { key: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/aidanyung"  },
-  { key: "youtube",  label: "YouTube",  href: "https://youtube.com/@aidanyung"     },
-  { key: "email",    label: "Email",    href: "mailto:aidanyungnc@gmail.com"      },
+  { key: "youtube",  label: "YouTube",  href: "https://www.youtube.com/@Currently_Aidan"     },
+  { key: "email", label: "Email", href: "https://mail.google.com/mail/?view=cm&to=aidanyungnc%40gmail.com" },
 ],
 },
 
@@ -170,14 +170,14 @@ photos: [
 {
 id: 'photography',
 label: 'Photography',
-description: 'Live sports brings technology, timing, and teamwork together. I’m drawn to the systems and crews that make each event happen.',
-photos: [],
-},
-{
-id: 'television',
-label: 'Television',
-description: 'Live sports brings technology, timing, and teamwork together. I’m drawn to the systems and crews that make each event happen.',
-photos: [],
+description: 'Because I work behind the camera, friends and family have often nominated me as their event photographer. However, my experience had been primarily with broadcast cameras and video, so still photography presented a new challenge. In video, a story can unfold over time but in photography, a single frame has to communicate the moment.\n\n' + "Last summer, I began developing my photography skills with my Canon EOS Rebel T100. I practiced whenever opportunities arose, experimenting with color grading, focus, and lighting. Instead of capturing everything, I focus on the moments. Photography has become a way for me to complement my experience in broadcast and explore a more deliberate form of visual storytelling.\n\n",
+photos: [
+{ src: "images/interests/photography/photographer.png", caption: "My Canon" },
+{ src: "images/interests/photography/sushi.png", caption: "Conveyor" },
+{ src: "images/interests/photography/matcha.png", caption: "Matcha" },
+{ src: "images/interests/photography/bridge.png", caption: "Under the bridge" },
+{ src: "images/interests/photography/mall.png", caption: "Tangram Mall" },
+],
 },
 ],
 };
@@ -507,7 +507,7 @@ social.forEach(({ key, label, href }) => {
 const a = el('a', {
 className: 'social-link',
 href,
-target: key !== 'email' ? '_blank' : '_self',
+target: '_blank',
 rel: 'noopener noreferrer',
 'aria-label': label,
 role: 'listitem',
