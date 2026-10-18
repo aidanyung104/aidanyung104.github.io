@@ -22,11 +22,6 @@ matching videos array. The ID is the value after v= in a
 YouTube watch URL, or after youtu.be/ in a short URL.
 Optionally add start: SECONDS to begin playback at that time.
 
-ADDING YOUTUBE VIDEOS
-─────────────────────
-Add { id: "VIDEO_ID", title: "Video title" } to the
-matching videos array. The ID is the value after v= in a
-YouTube watch URL, or after youtu.be/ in a short URL.
 
 EDITING JOB DESCRIPTIONS
 ─────────────────────────
@@ -46,7 +41,7 @@ about: {
 bioLines: ["I'm capable. I'm flexible."],
 bioHeadline: "I'm just getting started.",
 bioText:
-"I’m a Computer Science and Journalism student at UNC-Chapel Hill. I got my start in broadcast in high school, where I became interested in the technology behind it. Since then, I’ve explored graphics, streaming, and broadcast technology in a variety of settings. I’m especially interested in the intersection of software and media production, and I hope to continue building tools and systems that improve how content is created, managed, and distributed.",
+"I’m a Computer Science and Journalism student at UNC-Chapel Hill. I got my start in broadcast in high school, where I became interested in the technology behind it. Since then, I’ve explored graphics, streaming, and broadcast technology in a variety of settings. I’m especially interested in the intersection of software and media production and see myself as a bridge, able to communicate and understand the needs of production while also able to analyze and develop the technological solutions. I hope to continue building tools and systems that improve how content is created, managed, and distributed.",
 
 photos: [
   { src: "images/about/headshot.png", caption: "Aidan Yung, first of his name" },
@@ -117,6 +112,9 @@ photos: [
 { src: "images/work/acc/uncfbcam.png", caption: "Camera for UNC football" },
 { src: "images/work/acc/audio.png", caption: "Audio for UNC" },
 { src: "images/work/acc/dukembb.png", caption: "Camera for Duke basketball" },
+],
+videos: [
+{ id: "Gb9YI6pbtn0", title: "Work Reel 2024", start: 0 },
 ],
 },
 {
